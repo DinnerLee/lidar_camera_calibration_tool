@@ -1,0 +1,9 @@
+<launch>
+   <node pkg="ros_cali" type="ros_cali_node" name="ros_cali_node" output="screen" />
+   <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop">
+    <remap from="cmd_vel" to="/cmd_vel"/>
+   </node>
+   <node pkg="cl_fusion" type="cl_fusion" name="cl_fusion" output="screen">
+  </node>
+</launch>
+
